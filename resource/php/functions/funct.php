@@ -137,10 +137,10 @@ function vald(){
                         $login = $user->login(Input::get('username'),Input::get('password'),$remember);
                         if($login){
                             if($user->data()->groups == 1){
-                                 Redirect::to('template.php');
+                                 Redirect::to('profile.php');
                                 echo $user->data()->groups;
                             }else{
-                                 Redirect::to('template.php');
+                                 Redirect::to('profile.php');
                                 echo $user->data()->groups;
                             }
                         }else{

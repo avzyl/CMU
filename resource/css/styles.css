@@ -59,11 +59,11 @@
     margin-left: 15px;
 }
 .ceucolor{
-    color:#DC65A1;
+    color:#5CE1E6;
     margin-right: 3rem;
 }
 .ceucolor2{
-    color:#DC65A1;
+    color:#5CE1E6;
     font-weight: bold;
 }
 .bg2{
@@ -372,4 +372,8 @@ height: 100vh;
 background-size: cover;
 background: rgb(0,255,248);
 background: linear-gradient(7deg, rgba(1,255,248,1) 0%, rgba(42,41,50,1) 100%);
+}
+
+.container{
+  border-radius: 10px;
 }
