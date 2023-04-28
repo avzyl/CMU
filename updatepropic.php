@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'].'/CMU_RS/resource/php/class/core/init.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/CMU/resource/php/class/core/init.php';
 require_once 'resource/php/class/config.php';
 $user = new user();
 

@@ -356,3 +356,20 @@ header{
          visibility:hidden;
      }
 }
+/* ////////// */
+
+.sign-form{
+border-radius: 10px;
+}
+
+.btn{
+background-color: #5CE1E6;
+width: 200px;
+}
+
+body{
+height: 100vh;
+background-size: cover;
+background: rgb(0,255,248);
+background: linear-gradient(7deg, rgba(0,255,248,1) 0%, rgba(42,41,50,1) 100%);
+}
