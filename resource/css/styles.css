@@ -360,6 +360,8 @@ header{
 
 .sign-form{
 border-radius: 10px;
+background-color: #2e2c2c8a; 
+border: solid white 0.5px;
 }
 
 .btn{
@@ -371,5 +373,22 @@ body{
 height: 100vh;
 background-size: cover;
 background: rgb(0,255,248);
-background: linear-gradient(7deg, rgba(1,255,248,1) 0%, rgba(42,41,50,1) 100%);
+background: linear-gradient(7deg, rgba(0,255,248,1) 0%, rgba(42,41,50,1) 100%);
+
+
+}
+
+.navbar{
+        background-color: #2e2c2c7b;
+}
+
+.btn-reg{
+        background-color: #5CE1E6;
+        width: 600px;
+        
+        
+}
+
+.footer{
+        background-color:#1e1e1e;
 }
