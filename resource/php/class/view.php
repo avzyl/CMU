@@ -26,5 +26,4 @@ class view extends config{
             $user = new user();
              return $user->data()->mm;
         }
-
-}
+      }
