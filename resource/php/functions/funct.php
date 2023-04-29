@@ -76,6 +76,9 @@ function vald(){
             'email'=>array(
                 'required'=>'true'
             ),
+            'Role'=>array(
+                'required'=>'true'
+            ),
             'College'=>array(
                 'required'=>'true'
             )));
@@ -93,6 +96,7 @@ function vald(){
                         'groups'=>1,
                         'colleges'=> input::get('College'),
                         'email'=> input::get('email'),
+                        'roles'=> input::get('Role'),
                     ));
 
                     $user->createC(array(
@@ -137,10 +141,10 @@ function vald(){
                         $login = $user->login(Input::get('username'),Input::get('password'),$remember);
                         if($login){
                             if($user->data()->groups == 1){
-                                 Redirect::to('profile.php');
+                                 Redirect::to('home.php');
                                 echo $user->data()->groups;
                             }else{
-                                 Redirect::to('profile.php');
+                                 Redirect::to('home.php');
                                 echo $user->data()->groups;
                             }
                         }else{
@@ -168,6 +172,15 @@ function profilePic(){
         echo "<img class='rounded-circle profpic img-thumbnail ml-3' alt='100x100' src='data:".$view->getMmSRA().";base64,".base64_encode($view->getdpSRA())."'/>";
     }else{
         echo "<img class='rounded-circle profpic img-thumbnail' alt='100x100' src='resource/img/user.jpg'/>";
+    }
+}
+
+function listPic(){
+    $view = new view();
+    if($view->getdpSRA()!=="" || $view->getdpSRA()!==NULL){
+        echo "<img class='rounded-circle mr-3 profpicu ml-3' alt='20x20' src='resource/img/user.jpg'".$view->getMmSRA().";base64,".base64_encode($view->getdpSRA())."'/>";
+    }else{
+        echo "<img class='rounded-circle profpicu' alt='20x20' src='data:' />";
     }
 }
 
@@ -214,7 +227,7 @@ function updateProfile(){
                 } catch (Exception $e) {
                     die($e->getMessage());
                 }
-                Redirect::to('template.php');
+                Redirect::to('home.php');
             }else{
                 foreach ($validate->errors()as $error) {
                 pError($error);
@@ -255,7 +268,7 @@ function changeP(){
                     } catch (Exception $e) {
                         die($e->getMessage());
                     }
-                    Redirect::to('template.php');
+                    Redirect::to('home.php');
                 }
             }else{
                 foreach ($validate->errors()as $error) {

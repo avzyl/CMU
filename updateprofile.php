@@ -25,7 +25,7 @@ updateProfile();
 
    <nav class="navbar navbar-dark bg-dark shadow-sm slide-in-left">
      <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
-       <img src="resource/img/cmuLGO.png" height="100" class="d-inline-block align-top"
+       <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
          alt="mdb logo"><h3 class="ib">
      </a>
    </nav>
@@ -43,7 +43,7 @@ updateProfile();
                             <div class="row justify-content-center">
                                 <div class="form-group col-4">
                                  <label for = "username" class="text-light"> Username:</label>
-                                 <input class="form-control"  type = "text" name="username" id="username" value ="<?php echo escape($user->data()->username); ?>" autocomplete="off"  />
+                                 <input class="form-control"  type = "text" name="username" id="username" value ="<?php echo escape($user->data()->username); ?>" autocomplete="off"/>
                                 </div>
                                 <div class="form-group col-4">
                                  <label for = "fullName" class="text-light"> Full Name</label>
@@ -68,7 +68,7 @@ updateProfile();
                               <div class="form-group col-5">
                                   <label  >&nbsp;</label>
                               <input type="hidden" name ="Token" value="<?php echo Token::generate();?>" />
-                               <input type="submit" value="Update your profile" class=" form-control btn" href="home.php" />
+                               <input type="submit" value="Update your profile" class=" form-control btn-update" href="home.php"/>
                               </div>
                            </div>
                         </td>
@@ -86,7 +86,7 @@ updateProfile();
                                  <div class="form-group col-6">
                                      <label for="myfile">Upload your Picture</label>
                                          <input id="myfile" type="file" name="myfile" class="form-control-file" />
-                                         <input type="submit" name="pic" value="Update your Picture" class=" mt-4  form-control btn" accept=".jpg" />
+                                         <input type="submit" name="pic" value="Update your Picture" class=" mt-4  form-control btn-update" accept=".jpg" />
                                  </div>
                              </div>
                          </td>
@@ -95,18 +95,7 @@ updateProfile();
               </form>
          </div>
  </body>
- <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom  slide-in-right">
-   <div class="container text-center">
-       <div class="row">
-           <div class="col col-sm-5 text-left">
-               <small>Copyright &copy;Centro Escolar University     Office of the Registrar 2019</small>
-           </div>
-           <div class="col text-right">
-               <small>Created by: Reymart Bolasoc, Amelia Valencia , James Mangalile, Kenneth De Leon , Pamela Reyes , Ellen Mijares</small>
-           </div>
-       </div>
-   </div>
- </footer>
+
      <script src="vendor/js/jquery.js"></script>
      <script src="vendor/js/popper.js"></script>
      <script src="vendor/js/bootstrap.min.js"></script>

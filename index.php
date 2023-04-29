@@ -10,35 +10,27 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-dark bg-white shadow-sm">
-          <a class="navbar-brand" href="https://malolos.ceu.edu.ph/">
-            <img src="resource/img/logo.jpg" height="70" class="d-inline-block align-top "
-              alt="mdb logo"><h3 class="ib">
-          </a>
+      <nav class="navbar navbar-dark bg-dark shadow-sm slide-in-left">
+        <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
+          <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
+            alt="mdb logo"><h3 class="ib">
+        </a>
              <a href="https:/www.facebook.com/theCEUofficial/"><i class="fab fa-facebook-f ceucolor"></i></a>
              <a href="https://www.instagram.com/ceuofficial/"><i class="fab fa-instagram ceucolor"></i></a>
              <a href="https://twitter.com/ceumalolos"><i class="fab fa-twitter ceucolor"></i></a>
         </nav>
         <div class="container-fluid p-0 ">
             <div class="cover"></div>
-            <video id="videoBG" autoplay muted loop>
-                <source src="resource/mp4/bg.mp4" type="video/mp4">
-                </video>
             <div class="container bg">
                 <div class="jumbotron">
-                    <h1 class="display-4 text-center bottomline">Office of the University Registrar <span class="ceucolor2">Portal</span></h1>
-                    <p class="text-center">The Centro Escolar University Office of the Registrar supports the college/schools
-and the university in realizing its commitment for the total development of students by providing
-efficient and quality service in terms of registering, updating, evaluating and safekeeping of
-student records, participating in curriculum making/revision and implementing the
-University and CHED policies, rules and regulations.</p>
+                    <h1 class="display-4 text-center bottomline">Class Record <span class="ceucolor2">System</span></h1>
                     <p class="lead">
                     <div class="container-fluid">
                         <div class="col col-sm-12  text-center mt-5">
-                            <a class="btn btn-outline-light w-50 " href="alumniRegister.php" role="button">I'm an Alumni</a>
+                            <a class="btn w-50 " href="register.php" role="button">Register</a>
                         </div>
                         <div class="col col-sm-12  text-center mt-4">
-                            <a class="btn btn-outline-light w-50 " href="login.php" role="button">Log-in</a>
+                            <a class="btn w-50 " href="login.php" role="button">Log-in</a>
                         </div>
                     </div>
                     </p>
@@ -50,10 +42,10 @@ University and CHED policies, rules and regulations.</p>
       <div class="container text-center">
           <div class="row">
               <div class="col col-sm-5 text-left">
-                  <small>Copyright &copy;Centro Escolar University     Office of the Registrar 2019</small>
+                  <small>Copyright &copy; Group 2     Class Record System 2023</small>
               </div>
               <div class="col text-right">
-                  <small>Created by: Reymart Bolasoc, Amelia Valencia , James Mangalile, Kenneth De Leon , Pamela Reyes , Ellen Mijares</small>
+                  <small> Developers: Lyzza Abig, Leonard Julius , Al Cedrick Garcia, Joanna Policarpio, Jannah Mae Pescadera</small>
               </div>
           </div>
       </div>

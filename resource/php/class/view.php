@@ -17,6 +17,19 @@ class view extends config{
                 }
         }
 
+        public function role(){
+            $config = new config;
+            $con = $config->con();
+            $sql = "SELECT * FROM `tbl_roles`";
+            $data = $con-> prepare($sql);
+            $data ->execute();
+            $rows =$data-> fetchAll(PDO::FETCH_OBJ);
+                foreach ($rows as $row) {
+                  echo '<option data-tokens=".'.$row->role.'." value="'.$row->role.'">'.$row->role.'</option>';
+                  echo 'success';
+                }
+        }
+
         public function getdpSRA(){
             $user = new user();
             return $user->data()->dp;
@@ -27,5 +40,19 @@ class view extends config{
              return $user->data()->mm;
         }
 
+        public function getnames(){
+            $con = $this->con();
+            $sql = "SELECT * FROM `tbl_accounts`";
+            $data = $con->prepare($sql);
+            $data->execute();
+            $result = $data->fetchAll(PDO::FETCH_ASSOC);
 
+            foreach ($result as $data) {
+                echo "<div class='mt-3 ml-5 rounded-pill pt-3 pl-1 w-75 hr pb-3 text-light bg-dark justify-content-center'>";
+                echo listPic();
+                echo $data['role']." ";
+                echo $data['name'];
+                echo "</div>";
+            }
+        }
 }
