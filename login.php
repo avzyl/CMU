@@ -16,7 +16,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/CMU/resource/php/class/core/init.php';
 <body>
         <nav class="navbar navbar-dark bg-dark shadow-sm slide-in-left">
           <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
-            <img src="resource/img/cmuLGO.png" height="100" class="d-inline-block align-top"
+            <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
               alt="mdb logo"><h3 class="ib">
           </a>
         </nav>
@@ -38,7 +38,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/CMU/resource/php/class/core/init.php';
                     </form>
 
 
-                    
+
         <script src="vendor/js/jquery.js"></script>
         <script src="vendor/js/popper.js"></script>
         <script src="vendor/js/bootstrap.min.js"></script>
