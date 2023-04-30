@@ -24,6 +24,7 @@ class user{
             $this->find($user);
         }
     }
+  
     public function create($fields){
         if($this->_db->insert('tbl_accounts',$fields)){
             return true;

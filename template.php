@@ -1,94 +1,148 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'].'/CMU/resource/php/class/core/init.php';
-isLogin();
-$viewtable = new viewtable();
- ?>
+
+$user = new User();
+
+$servername = "127.0.0.1: 3306";
+$username = "root";
+$password = "";
+$dbname = "cmu";
+
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+$sql = "SELECT * FROM tbl_accounts";
+$result = mysqli_query($conn, $sql);
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CEU Test Portal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap.min.css">
-  <script src="vendor/js/jquery.js"></script>
-  <link href="vendor/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css"  href="resource/css/styles.css">
-  <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap-select.min.css">
-  <link rel="stylesheet" type="text/css" href="vendor/css/dataTables.css">
-  <script type="text/javascript" charset="utf8" src="vendor/js/dataTables/jquery.dataTables.js"></script>
-  <script type="text/javascript" charset="utf8" src="vendor/js/dataTables/dataTables.buttons.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="vendor/js/dataTables/jszip.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="vendor/js/dataTables/pdfmake.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="vendor/js/dataTables/vfs_fonts.js"></script>
-  <script type="text/javascript" charset="utf8" src="vendor/js/dataTables/buttons.html5.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="vendor/js/dataTables/buttons.print.min.js"></script>
-
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css"  href="resource/css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/07311ba66e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-        <nav class="navbar navbar-dark bg-white shadow-sm slide-in-left">
-          <a class="navbar-brand" href="https://malolos.ceu.edu.ph/">
-            <img src="resource/img/logo.jpg" height="70" class="d-inline-block align-top"
-              alt="mdb logo"><h3 class="ib">
-          </a>
-             <a href="pending.php"><i class="fas fa-home ceucolor"></i></a>
-             <a href="https:/www.facebook.com/theCEUofficial/"><i class="fab fa-facebook-f ceucolor"></i></a>
-             <a href="https://www.instagram.com/ceuofficial/"><i class="fab fa-instagram ceucolor"></i></a>
-             <a href="https://twitter.com/ceumalolos"><i class="fab fa-twitter ceucolor"></i></a>
-        </nav>
-
-        <div class="container mt-4 puff-in-center">
-          <?php $viewtable->viewApproveTable(); ?>
+  <nav class="navbar navbar-dark bg-dark shadow-sm slide-in-left">
+    <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
+      <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
+        alt="mdb logo"><h3 class="ib">
+    </a>
+    <a href="logout.php"><i class="fas fa-home ceucolor"></i></a>
+  </nav>
+  <div class="container">
+    <div class="row pt-5">
+      <div class="col-md-4">
+        <div class="card profile-card bg-dark">
+          <?php profilePic(); ?>
+          <h2><?php echo $user->data()->name;?></h2>
+          <div class="cont">
+            <h4 class="text-light"><?php echo $user->data()->role;?></h4>
+            <!-- insert bio quote -->
+            <h6 class="text-light"><?php echo $user->data()->colleges;?></h6>
+            <div class="link">
+              <a href="updateprofile.php"><i class="fa-sharp fa-solid fa-circle-user text-light"></i></a>
+              <a href="changepassword.php"><i class="fa-sharp fa-solid fa-key text-light"></i></a>
+            </div>
+          </div>
         </div>
-</body>
+    </div>
+    <div class="list col-md-6 bg-dark">
+      <div class="row-md-6">
+        <div class="container">
+          <table class="borderless">
+              <thead>
+                <tr>
+                  <th><h1>Class</h1></th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                  if (mysqli_num_rows($result) > 0) {
+                    // output data of each row
+                    while($row = mysqli_fetch_assoc($result)) {
+                      ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="vendor/js/bootstrap.min.js"></script>
-<script src="vendor/js/bootstrap-select.min.js"></script>
+                      <tr>
+                        <!-- <td><?php //echo $row["username"] ?></td> -->
+                        <!-- <td><?php //echo $row["name"] ?></td> -->
+                        <!-- <td><?php //echo '<img src="data:image;base64,',base64_encode.($row['dp']).'" alt="Image" style="width: 150px, height: 150px;">';?></td> -->
+                        <td><?php echo listPic()?></td>
+                        <td><button id='<?php echo $row["id"] ?>' class='name-btn'><h3><?php echo $row["name"]?></h3></button></td>
+                      </tr>
+                <?php
+                    }
+                  } else {
+                    echo "0 results";
+                  }
+
+                  mysqli_close($conn);
+                  ?>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Information</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    Modal body..
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
     <script>
-    $(document).ready(function(){
-      window.$('#scholartable').DataTable({
-        dom: 'frtipB',
-        buttons: [
-            {
-                extend: 'excelHtml5',
-                className: 'btn btn-success',
-                text: 'Excel',
-                titleAttr: 'Export to Excel',
-                title: 'Scholarship Report',
-                exportOptions: {
-                    columns: ':not(:last-child)',
-                }
-            },
-            {
-                extend: 'csvHtml5',
-                className: 'btn btn-primary',
-                text: 'CSV',
-                titleAttr: 'CSV',
-                title: 'Scholarship Report',
-                exportOptions: {
-                    columns: ':not(:last-child)',
-                }
-            },
-            {
-                extend: 'pdfHtml5',
-                className: 'btn btn-danger',
-                text: 'PDF',
-                titleAttr: 'PDF',
-                title: 'Scholarship Report',
-                orientation: 'landscape',
-                pageSize: 'TABLOID',
-                exportOptions: {
-                    columns: ':not(:last-child)',
-                }
-            }
-        ]
-        });
-    });
-</script>
+      $(document).ready(function(){
+          $('button').click(function(){
+        id_emp = $(this).attr('id')
+              $.ajax({url: "select.php",
+              method:'post',
+              data:{emp_id:id_emp},
+               success: function(result){
+          $(".modal-body").html(result);
+        }});
+
+
+              $('#myModal').modal("show");
+          })
+      })
+    </script>
+
 </body>
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom">
+  <div class="container text-center">
+      <div class="row">
+          <div class="col col-sm-5 text-left">
+              <small>Copyright &copy; Group 2     Class Record System 2023</small>
+          </div>
+          <div class="col text-right">
+              <small> Developers: Lyzza Abig, Leonard Julius , Al Cedrick Garcia, Joanna Policarpio, Jannah Mae Pescadera</small>
+          </div>
+      </div>
+  </div>
+</footer>
 </html>

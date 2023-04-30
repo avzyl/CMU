@@ -55,4 +55,24 @@ class view extends config{
                 echo "</div>";
             }
         }
+
+        public function getList(){
+          $con = $this->con();
+          $sql = "SELECT * FROM `tbl_accounts`";
+          $data = $con->prepare($sql);
+          $data->execute();
+          $result = $data->fetchAll(PDO::FETCH_ASSOC);
+          echo "<table class='table'>
+          <thead>
+          <thead>
+          <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Colleges</th>
+          </tr>
+          </thead>
+          <tbody>
+          </table>";
+          }
 }
