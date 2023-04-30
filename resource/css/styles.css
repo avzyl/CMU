@@ -7,7 +7,7 @@
 }
 .inl2{
     display:none;
-} 
+}
 .inl{
     display: inline-block;
 }
@@ -472,9 +472,14 @@ background: rgb(0,255,248);
 background: linear-gradient(7deg, rgba(1,255,248,1) 0%, rgba(42,41,50,1) 100%);
 }
 
+/* page */
+.page{
+  min-height: 100vh;
+}
+
 .container{
   border-radius: 10px;
-  
+
 }
 
 .list{

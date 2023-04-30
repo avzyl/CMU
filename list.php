@@ -9,54 +9,50 @@
   <link rel="stylesheet" type="text/css"  href="resource/css/styles.css">
 </head>
 <body>
-    <header>
-      <nav class="navbar shadow-sm slide-in-left">
-        <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
-          <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
+    <section class="page">
+      <header>
+        <nav class="navbar shadow-sm slide-in-left">
+          <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
+            <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
             alt="mdb logo"><h3 class="ib">
-        </a>
-             <a href="https:/www.facebook.com/theCEUofficial/"><i class="fab fa-facebook-f ceucolor"></i></a>
-             <a href="https://www.instagram.com/ceuofficial/"><i class="fab fa-instagram ceucolor"></i></a>
-             <a href="https://twitter.com/ceumalolos"><i class="fab fa-twitter ceucolor"></i></a>
-        </nav>
-        <div class="container-fluid p-0 ">
+            </a>
+            <a href="https:/www.facebook.com/theCEUofficial/"><i class="fab fa-facebook-f ceucolor"></i></a>
+            <a href="https://www.instagram.com/ceuofficial/"><i class="fab fa-instagram ceucolor"></i></a>
+            <a href="https://twitter.com/ceumalolos"><i class="fab fa-twitter ceucolor"></i></a>
+          </nav>
+          <div class="container-fluid p-0 ">
             <div class="cover"></div>
             <div class="container bg">
-                <div class="jumbotron">
+              <div class="jumbotron">
                 <h1 class="display-4 text-center bottomline">View <span class="ceucolor2">List</span></h1>
-                    <p class="lead">
-                    <div class="container-fluid">
-                        <div class="col col-sm-12  text-center mt-5">
-                            <a class="btn w-50 " href="teacher.php" role="button">Teacher</a>
-                        </div>
-                        <div class="col col-sm-12  text-center mt-4">
-                            <a class="btn w-50 " href="student.php" role="button">Students</a>
-                        </div>
+                <p class="lead">
+                  <div class="container-fluid">
+                    <div class="col col-sm-12  text-center mt-5">
+                      <a class="btn w-50 " href="teacher.php" role="button">Teacher</a>
                     </div>
-                    </p>
-
-<<<<<<< Updated upstream
-                
-=======
-
->>>>>>> Stashed changes
-
-                </div>
+                    <div class="col col-sm-12  text-center mt-4">
+                      <a class="btn w-50 " href="student.php" role="button">Students</a>
+                    </div>
+                  </div>
+                </p>
+              </div>
             </div>
-        </div>
-    </header>
-    <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom">
-      <div class="container text-center">
-          <div class="row">
+          </div>
+        </header>
+        <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom">
+          <div class="container text-center">
+            <div class="row">
               <div class="col col-sm-5 text-left">
-                  <small>Copyright &copy; Group 2     Class Record System 2023</small>
+                <small>Copyright &copy; Group 2     Class Record System 2023</small>
               </div>
               <div class="col text-right">
-                  <small> Developers: Lyzza Abig, Leonard Julius , Al Cedrick Garcia, Joanna Policarpio, Jannah Mae Pescadera</small>
+                <small> Developers: Lyzza Abig, Leonard Julius , Al Cedrick Garcia, Joanna Policarpio, Jannah Mae Pescadera</small>
               </div>
+            </div>
           </div>
-      </div>
-    </footer>
+        </footer>
+
+    </section>
     <script src="vendor/js/jquery.js"></script>
     <script src="vendor/js/popper.js"></script>
     <script src="vendor/js/bootstrap.min.js"></script>

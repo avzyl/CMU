@@ -31,43 +31,44 @@ $result = mysqli_query($conn, $sql);
   <script src="https://kit.fontawesome.com/07311ba66e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-dark shadow-sm slide-in-left">
-    <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
-      <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
+  <section class="page">
+    <nav class="navbar navbar-dark bg-dark shadow-sm slide-in-left">
+      <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
+        <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
         alt="mdb logo"><h3 class="ib">
-    </a>
-    <a href="template.php"><i class="fas fa-home ceucolor"></i></a>
-    <a href="logout.php"><i class="fas fa-right-from-bracket ceucolor"></i></a>
-  </nav>
-  <div class="container">
-    <div class="row pt-5">
-      <div class="col-md-4">
-        <div class="card profile-card bg-dark">
-          <?php profilePic(); ?>
-          <h2><?php echo $user->data()->name;?></h2>
-          <div class="cont">
-            <h4 class="text-light"><?php echo $user->data()->role;?></h4>
-            <!-- insert bio quote -->
-            <h6 class="text-light"><?php echo $user->data()->colleges;?></h6>
-            <div class="link">
-              <a href="updateprofile.php"><i class="fa-sharp fa-solid fa-circle-user text-light"></i></a>
-              <a href="changepassword.php"><i class="fa-sharp fa-solid fa-key text-light"></i></a>
+        </a>
+        <a href="template.php"><i class="fas fa-home ceucolor"></i></a>
+        <a href="logout.php"><i class="fas fa-right-from-bracket ceucolor"></i></a>
+      </nav>
+      <div class="container">
+        <div class="row pt-5">
+          <div class="col-md-4">
+            <div class="card profile-card bg-dark">
+              <?php profilePic(); ?>
+              <h2><?php echo $user->data()->name;?></h2>
+              <div class="cont">
+                <h4 class="text-light"><?php echo $user->data()->role;?></h4>
+                <!-- insert bio quote -->
+                <h6 class="text-light"><?php echo $user->data()->colleges;?></h6>
+                <div class="link">
+                  <a href="updateprofile.php"><i class="fa-sharp fa-solid fa-circle-user text-light"></i></a>
+                  <a href="changepassword.php"><i class="fa-sharp fa-solid fa-key text-light"></i></a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-    </div>
-    <div class="list col-md-6 bg-dark">
-      <div class="row-md-6">
-        <div class="container">
-          <table class="borderless">
-              <thead>
-                <tr>
-                  <th><h1 class="text-white">Class</h1></th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php
-                  // if (mysqli_num_rows($result) > 0) {
+          <div class="list col-md-6 bg-dark">
+            <div class="row-md-6">
+              <div class="container">
+                <table class="borderless">
+                  <thead>
+                    <tr>
+                      <th><h1 class="text-white">Students</h1></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    // if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
                       ?>
@@ -79,42 +80,44 @@ $result = mysqli_query($conn, $sql);
                         <td><?php echo listPic()?></td>
                         <td><button id='<?php echo $row["id"] ?>' class='name-btn text-white'><h3><?php echo $row["name"]?></h3></button></td>
                       </tr>
-                <?php
+                      <?php
                     }
-                  // } else {
-                  //   echo "0 results";
-                  // }
+                    // } else {
+                    //   echo "0 results";
+                    // }
 
-                  mysqli_close($conn);
-                  ?>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal" id="myModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
+                    mysqli_close($conn);
+                    ?>
+                  </tbody>
+                </table>
+              </div>
+              <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
 
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                    <h4 class="modal-title">Information</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">Information</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      Modal body..
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
                   </div>
-
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                    Modal body..
-                  </div>
-
-                  <!-- Modal footer -->
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                  </div>
-
                 </div>
               </div>
             </div>
           </div>
-        </div>
+
+  </section>
 
     <script>
       $(document).ready(function(){

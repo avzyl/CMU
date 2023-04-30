@@ -18,85 +18,99 @@ $view = new view;
 
  </head>
  <body>
-   <nav class="navbar shadow-sm slide-in-left">
-     <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
-       <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
+   <section class="page">
+     <nav class="navbar shadow-sm slide-in-left">
+       <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
+         <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
          alt="mdb logo"><h3 class="ib">
-     </a>
-     <a href="template.php"><i class="fas fa-home ceucolor"></i></a>
-     <a href="logout.php"><i class="fas fa-right-from-bracket ceucolor"></i></a>
-   </nav>
+         </a>
+         <a href="template.php"><i class="fas fa-home ceucolor"></i></a>
+         <a href="logout.php"><i class="fas fa-right-from-bracket ceucolor"></i></a>
+       </nav>
 
-         <div class="container mt-4 puff-in-center bg-dark">
-             <div class="row">
-                 <div class="col-12">
-                     <h1 class="text-center text-light">Register New Student Records Assistant</h1>
-                 </div>
-            </div>
-            <?php
-                vald();
-            ?>
-            <form action="" method="post">
-                <table class="table ">
-                    <tr>
-                        <td>
-                            <div class="row justify-content-center text-light">
-                                <div class="form-group col-4">
-                                 <label for = "username" class=""> Username:</label>
-                                 <input class="form-control"  type = "text" name="username" id="username" value ="<?php echo input::get('username');?>" autocomplete="off" required />
-                                </div>
-                                <div class="form-group col-4">
-                                 <label for = "password"> Password:</label>
-                                 <input type="password" class="form-control" name="password" id="password" value ="<?php echo input::get('password');?>" autocomplete="off"required/>
-                                </div>
-                                <div class="form-group col-4">
-                                 <label for = "ConfirmPassword"> Confirm Password:</label>
-                                 <input type="password" class="form-control" name="ConfirmPassword" id="ConfirmPassword" value ="<?php echo input::get('ConfirmPassword');?>" autocomplete="off"required/>
-                                </div>
-                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="row justify-content-center text-light">
-                                <div class="form-group col-3">
-                                 <label for = "fullName" class=""> Full Name</label>
-                                 <input class="form-control"  type = "text" name="fullName" id="fullName" value ="<?php echo input::get('fullName');?>"/required>
-                                </div>
-                                <div class="form-group col-3">
-                                  <label for="College" >College/s to handle</label>
-                                      <select id="College" name="College[]" class="selectpicker form-control" data-live-search="true" multiple required>
-                                        <?php $view->collegeSP2();?>
-                                      </select>
-                                </div>
-                                <div class="form-group col-3">
-                                  <label for="Role" >Role</label>
-                                      <select id="Role" name="Role[]" class="selectpicker form-control" data-live-search="true" multiple required>
-                                        <?php $view->role();?>
-                                      </select>
-                                </div>
-                                <div class="form-group col-3">
-                                 <label for = "email" class=""> Email Address</label>
-                                 <input class="form-control"  type = "text" name="email" id="email" value ="<?php echo input::get('email');?>"/required>
-                                </div>
-                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="row justify-content-center">
-                                <div class="form-group col-7">
-                                    <label  >&nbsp;</label>
-                                <input type="hidden" name ="Token" value="<?php echo Token::generate();?>" />
-                                 <input type="submit" value="Register New SRA" class=" form-control btn-reg" />
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-             </form>
+       <div class="container mt-4 puff-in-center bg-dark">
+         <div class="row">
+           <div class="col-12">
+             <h1 class="text-center text-light">Register New Student Records Assistant</h1>
+           </div>
          </div>
- </body>
+         <?php
+         vald();
+         ?>
+         <form action="" method="post">
+           <table class="table ">
+             <tr>
+               <td>
+                 <div class="row justify-content-center text-light">
+                   <div class="form-group col-4">
+                     <label for = "username" class=""> Username:</label>
+                     <input class="form-control"  type = "text" name="username" id="username" value ="<?php echo input::get('username');?>" autocomplete="off" required />
+                   </div>
+                   <div class="form-group col-4">
+                     <label for = "password"> Password:</label>
+                     <input type="password" class="form-control" name="password" id="password" value ="<?php echo input::get('password');?>" autocomplete="off"required/>
+                   </div>
+                   <div class="form-group col-4">
+                     <label for = "ConfirmPassword"> Confirm Password:</label>
+                     <input type="password" class="form-control" name="ConfirmPassword" id="ConfirmPassword" value ="<?php echo input::get('ConfirmPassword');?>" autocomplete="off"required/>
+                   </div>
+                 </div>
+               </td>
+             </tr>
+             <tr>
+               <td>
+                 <div class="row justify-content-center text-light">
+                   <div class="form-group col-3">
+                     <label for = "fullName" class=""> Full Name</label>
+                     <input class="form-control"  type = "text" name="fullName" id="fullName" value ="<?php echo input::get('fullName');?>"/required>
+                   </div>
+                   <div class="form-group col-3">
+                     <label for="College" >College/s to handle</label>
+                     <select id="College" name="College[]" class="selectpicker form-control" data-live-search="true" multiple required>
+                       <?php $view->collegeSP2();?>
+                     </select>
+                   </div>
+                   <div class="form-group col-3">
+                     <label for="Role" >Role</label>
+                     <select id="Role" name="Role[]" class="selectpicker form-control" data-live-search="true" multiple required>
+                       <?php $view->role();?>
+                     </select>
+                   </div>
+                   <div class="form-group col-3">
+                     <label for = "email" class=""> Email Address</label>
+                     <input class="form-control"  type = "text" name="email" id="email" value ="<?php echo input::get('email');?>"/required>
+                   </div>
+                 </div>
+               </td>
+             </tr>
+             <tr>
+               <td>
+                 <div class="row justify-content-center">
+                   <div class="form-group col-7">
+                     <label  >&nbsp;</label>
+                     <input type="hidden" name ="Token" value="<?php echo Token::generate();?>" />
+                     <input type="submit" value="Register New SRA" class=" form-control btn-reg" />
+                   </div>
+                 </div>
+               </td>
+             </tr>
+           </table>
+         </form>
+       </div>
+
+       <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom">
+         <div class="container text-center">
+             <div class="row">
+                 <div class="col col-sm-5 text-left">
+                     <small>Copyright &copy; Group 2     Class Record System 2023</small>
+                 </div>
+                 <div class="col text-right">
+                     <small> Developers: Lyzza Abig, Leonard Julius , Al Cedrick Garcia, Joanna Policarpio, Jannah Mae Pescadera</small>
+                 </div>
+             </div>
+         </div>
+       </footer>
+   </section>
 
      <script src="vendor/js/jquery.js"></script>
      <script src="vendor/js/popper.js"></script>

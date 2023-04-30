@@ -20,7 +20,6 @@ $user = new User();
 
  </head>
  <body>
-
    <nav class="navbar navbar-dark bg-dark shadow-sm slide-in-left">
      <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
        <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
@@ -58,19 +57,18 @@ $user = new User();
        </div>
      </div>
    </div>
- </body>
- <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom">
-   <div class="container text-center">
-       <div class="row">
-           <div class="col col-sm-5 text-left">
-               <small>Copyright &copy; Group 2     Class Record System 2023</small>
-           </div>
-           <div class="col text-right">
-               <small> Developers: Lyzza Abig, Leonard Julius , Al Cedrick Garcia, Joanna Policarpio, Jannah Mae Pescadera</small>
-           </div>
-       </div>
-   </div>
- </footer>
+   <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom">
+     <div class="container text-center">
+         <div class="row">
+             <div class="col col-sm-5 text-left">
+                 <small>Copyright &copy; Group 2     Class Record System 2023</small>
+             </div>
+             <div class="col text-right">
+                 <small> Developers: Lyzza Abig, Leonard Julius , Al Cedrick Garcia, Joanna Policarpio, Jannah Mae Pescadera</small>
+             </div>
+         </div>
+     </div>
+   </footer>
      <script src="vendor/js/jquery.js"></script>
      <script src="vendor/js/popper.js"></script>
      <script src="vendor/js/bootstrap.min.js"></script>

@@ -19,58 +19,72 @@ $user = new user();
 
  </head>
  <body>
-   <nav class="navbar navbar-dark bg-dark shadow-sm slide-in-left">
-     <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
-       <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
+   <section class="page">
+     <nav class="navbar navbar-dark bg-dark shadow-sm slide-in-left">
+       <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
+         <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
          alt="mdb logo"><h3 class="ib">
-     </a>
-     <a href="template.php"><i class="fas fa-home ceucolor"></i></a>
-     <a href="logout.php"><i class="fas fa-right-from-bracket ceucolor"></i></a>
-   </nav>
+         </a>
+         <a href="template.php"><i class="fas fa-home ceucolor"></i></a>
+         <a href="logout.php"><i class="fas fa-right-from-bracket ceucolor"></i></a>
+       </nav>
 
-         <div class="container mt-5  pt-5 puff-in-center bg-dark">
-             <div class="row">
-                 <div class="col-12">
-                   <?php changeP(); ?>
-                     <h1 class="text-center text-light">Change Password</h1>
-                 </div>
-            </div>
-            <form action="" method="post">
-                <table class="table ">
-                    <tr>
-                        <td>
-                            <div class="row justify-content-center text-light">
-                                <div class="form-group col-4">
-                                 <label for = "password_current"> Enter Current Password:</label>
-                                 <input type="password" class="form-control" name="password_current" id="password" value ="" autocomplete="off"required/>
-                                </div>
-                                <div class="form-group col-4">
-                                 <label for = "password"> Enter New Password:</label>
-                                 <input type="password" class="form-control" name="password" id="password" value ="" autocomplete="off"required/>
-                                </div>
-                                <div class="form-group col-4">
-                                 <label for = "ConfirmPassword"> Confirm New Password:</label>
-                                 <input type="password" class="form-control" name="ConfirmPassword" id="ConfirmPassword" value ="" autocomplete="off"required/>
-                                </div>
-                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="row justify-content-center">
-                                <div class="form-group col-7">
-                                    <label  >&nbsp;</label>
-                                <input type="hidden" name ="Token" value="<?php echo Token::generate();?>" />
-                                 <input type="submit" value="Change password" class="form-control btn-pass" />
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-             </form>
+       <div class="container mt-5  pt-5 puff-in-center bg-dark">
+         <div class="row">
+           <div class="col-12">
+             <?php changeP(); ?>
+             <h1 class="text-center text-light">Change Password</h1>
+           </div>
          </div>
- </body>
+         <form action="" method="post">
+           <table class="table ">
+             <tr>
+               <td>
+                 <div class="row justify-content-center text-light">
+                   <div class="form-group col-4">
+                     <label for = "password_current"> Enter Current Password:</label>
+                     <input type="password" class="form-control" name="password_current" id="password" value ="" autocomplete="off"required/>
+                   </div>
+                   <div class="form-group col-4">
+                     <label for = "password"> Enter New Password:</label>
+                     <input type="password" class="form-control" name="password" id="password" value ="" autocomplete="off"required/>
+                   </div>
+                   <div class="form-group col-4">
+                     <label for = "ConfirmPassword"> Confirm New Password:</label>
+                     <input type="password" class="form-control" name="ConfirmPassword" id="ConfirmPassword" value ="" autocomplete="off"required/>
+                   </div>
+                 </div>
+               </td>
+             </tr>
+             <tr>
+               <td>
+                 <div class="row justify-content-center">
+                   <div class="form-group col-7">
+                     <label  >&nbsp;</label>
+                     <input type="hidden" name ="Token" value="<?php echo Token::generate();?>" />
+                     <input type="submit" value="Change password" class="form-control btn-pass" />
+                   </div>
+                 </div>
+               </td>
+             </tr>
+           </table>
+         </form>
+       </div>
 
+       <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom">
+         <div class="container text-center">
+           <div class="row">
+             <div class="col col-sm-5 text-left">
+               <small>Copyright &copy; Group 2     Class Record System 2023</small>
+             </div>
+             <div class="col text-right">
+               <small> Developers: Lyzza Abig, Leonard Julius , Al Cedrick Garcia, Joanna Policarpio, Jannah Mae Pescadera</small>
+             </div>
+           </div>
+         </div>
+       </footer>
+
+   </section>
      <script src="vendor/js/jquery.js"></script>
      <script src="vendor/js/popper.js"></script>
      <script src="vendor/js/bootstrap.min.js"></script>
