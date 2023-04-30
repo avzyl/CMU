@@ -75,4 +75,27 @@ class view extends config{
           <tbody>
           </table>";
           }
+
+          public function viewT(){
+                $con = $this->con();
+                $sql ="SELECT * FROM `tbl_accounts` WHERE `role` = 'teacher'";
+                $data = $con->prepare($sql);
+                $data->execute();
+                $result = $data->fetchAll(PDO::FETCH_ASSOC);
+                echo "<h3 class='mb-4 mt-5'><b>Completed Task</b></h3>";
+                echo "<table class='table table-striped table-bordered table-sm'>";
+                echo "<thead>
+                        <tr>
+                          <th>Task Item</th>
+                          <th>Date Completed</th>
+                        </tr>
+                      </thead><tbody>";
+                foreach ($result as $data) {
+                  echo "<tr>";
+                  echo "<td>$data[name]</td>";
+                  // echo "<td>$data[date_completed]</td>";
+                  echo "</tr>";
+                }
+                echo "</tbody></table>";
+              }
 }

@@ -10,7 +10,7 @@ $dbname = "cmu";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$sql = "SELECT * FROM `tbl_accounts`";
+$sql = "SELECT * FROM `tbl_accounts` WHERE `role` = 'TEACHER'";
 $result = mysqli_query($conn, $sql);
 
 ?>
@@ -41,7 +41,7 @@ $result = mysqli_query($conn, $sql);
   <div class="container">
     <div class="row pt-5">
       <div class="col-md-4">
-        <div class="card profile-card bg-dark text-light ;">
+        <div class="card profile-card bg-dark">
           <?php profilePic(); ?>
           <h2><?php echo $user->data()->name;?></h2>
           <div class="cont">
@@ -55,7 +55,7 @@ $result = mysqli_query($conn, $sql);
           </div>
         </div>
     </div>
-    <div class="list col-md-6 bg-dark text-light">
+    <div class="list col-md-6 bg-dark">
       <div class="row-md-6">
         <div class="container">
           <table class="borderless">
@@ -66,7 +66,7 @@ $result = mysqli_query($conn, $sql);
               </thead>
               <tbody>
                 <?php
-                  if (mysqli_num_rows($result) > 0) {
+                  // if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
                       ?>
@@ -80,9 +80,9 @@ $result = mysqli_query($conn, $sql);
                       </tr>
                 <?php
                     }
-                  } else {
-                    echo "0 results";
-                  }
+                  // } else {
+                  //   echo "0 results";
+                  // }
 
                   mysqli_close($conn);
                   ?>
