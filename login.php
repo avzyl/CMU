@@ -14,7 +14,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/CMU/resource/php/class/core/init.php';
   <link rel="stylesheet" type="text/css"  href="resource/css/styles.css">
 </head>
 <body>
-        <nav class="navbar navbar-dark bg-dark shadow-sm slide-in-left">
+        <nav class="navbar shadow-sm slide-in-left">
           <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
             <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
               alt="mdb logo"><h3 class="ib">
@@ -26,7 +26,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/CMU/resource/php/class/core/init.php';
 
 
 
-                    <form class="sign-form text-center   p-5 shadow puff-in-center bg-dark" action="" method="post" >
+                    <form class="sign-form text-center   p-5 shadow puff-in-center" action="" method="post" >
                     <p class="h4 mb-4 text-light">Sign in</p>
                     <?php logd();?>
                     <input type="text" id="username" class="form-control mb-4 text-light" name="username" placeholder="Enter Username" required>

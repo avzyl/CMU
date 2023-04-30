@@ -7,7 +7,7 @@
 }
 .inl2{
     display:none;
-}
+} 
 .inl{
     display: inline-block;
 }
@@ -74,8 +74,8 @@
 .btn.ceubtn:active
 {
     color: #f8f9fa;
-    border-color: #DC65A1;
-    background-color:#DC65A1;
+    border-color: #5CE1E6;
+    background-color:#5CE1E6;
 }
 #videoBG {
     position:fixed;
@@ -117,8 +117,8 @@ header{
 .btn-outline-light:active
 {
     color: #f8f9fa;
-    border-color: #DC65A1;
-    background-color:#DC65A1;
+    border-color: #5CE1E6;
+    background-color:#5CE1E6;
 }
 
 /* Alumni Portal  */
@@ -438,10 +438,11 @@ header{
          visibility:hidden;
      }
 }
-/* ////////// */
+/* /////login/register///// */
 
 .sign-form{
 border-radius: 10px;
+background-color: #282828ae;
 }
 
 .btn{
@@ -466,7 +467,6 @@ width: 600px;
 
 
 body{
-height: 100vh;
 background-size: cover;
 background: rgb(0,255,248);
 background: linear-gradient(7deg, rgba(1,255,248,1) 0%, rgba(42,41,50,1) 100%);
@@ -474,6 +474,7 @@ background: linear-gradient(7deg, rgba(1,255,248,1) 0%, rgba(42,41,50,1) 100%);
 
 .container{
   border-radius: 10px;
+  
 }
 
 .list{
@@ -486,6 +487,10 @@ img{
 
 .logo{
   height: 70px;
+}
+
+.navbar{
+  background-color: #282828ae;
 }
 /* profile card */
 .profile-card{
@@ -545,4 +550,4 @@ img{
     display: flex;
     justify-content: space-between;
 }
-/* end of profile-card */
+/* list */

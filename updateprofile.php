@@ -83,7 +83,7 @@ updateProfile();
                    <div class="form-group col-4 text-right">
                      <?php profilePic(); ?>
                    </div>
-                   <div class="form-group col-6">
+                   <div class="form-group col-6 text-light">
                      <label for="myfile">Upload your Picture</label>
                      <input id="myfile" type="file" name="myfile" class="form-control-file" />
                      <input type="submit" name="pic" value="Update your Picture" class=" mt-4  form-control btn-update" accept=".jpg" />

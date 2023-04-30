@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-      <nav class="navbar navbar-dark bg-dark shadow-sm slide-in-left">
+      <nav class="navbar shadow-sm slide-in-left">
         <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
           <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
             alt="mdb logo"><h3 class="ib">

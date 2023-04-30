@@ -3,7 +3,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/CMU/resource/php/class/core/init.php';
 
 $user = new User();
 
-$servername = "127.0.0.1: 3306";
+$servername = "127.0.0.1: 3307";
 $username = "root";
 $password = "";
 $dbname = "cmu";
@@ -41,7 +41,7 @@ $result = mysqli_query($conn, $sql);
   <div class="container">
     <div class="row pt-5">
       <div class="col-md-4">
-        <div class="card profile-card bg-dark">
+        <div class="card profile-card bg-dark text-light ;">
           <?php profilePic(); ?>
           <h2><?php echo $user->data()->name;?></h2>
           <div class="cont">
@@ -55,7 +55,7 @@ $result = mysqli_query($conn, $sql);
           </div>
         </div>
     </div>
-    <div class="list col-md-6 bg-dark">
+    <div class="list col-md-6 bg-dark text-light">
       <div class="row-md-6">
         <div class="container">
           <table class="borderless">
