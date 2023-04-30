@@ -36,7 +36,8 @@ $result = mysqli_query($conn, $sql);
       <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
         alt="mdb logo"><h3 class="ib">
     </a>
-    <a href="logout.php"><i class="fas fa-home ceucolor"></i></a>
+    <a href="template.php"><i class="fas fa-home ceucolor"></i></a>
+    <a href="logout.php"><i class="fas fa-right-from-bracket ceucolor"></i></a>
   </nav>
   <div class="container">
     <div class="row pt-5">

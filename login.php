@@ -14,12 +14,23 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/CMU/resource/php/class/core/init.php';
   <link rel="stylesheet" type="text/css"  href="resource/css/styles.css">
 </head>
 <body>
+<<<<<<< Updated upstream
         <nav class="navbar shadow-sm slide-in-left">
           <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
             <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
               alt="mdb logo"><h3 class="ib">
           </a>
         </nav>
+=======
+  <nav class="navbar navbar-dark bg-dark shadow-sm slide-in-left">
+    <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
+      <img src="resource/img/cmuLGO.png" height="100" class="logo d-inline-block align-top"
+        alt="mdb logo"><h3 class="ib">
+    </a>
+    <a href="template.php"><i class="fas fa-home ceucolor"></i></a>
+    <a href="logout.php"><i class="fas fa-right-from-bracket ceucolor"></i></a>
+  </nav>
+>>>>>>> Stashed changes
            <div class="container mt-5">
             <div class="row justify-content-center">
                 <div class=" col-8 ">
