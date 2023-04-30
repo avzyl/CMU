@@ -47,10 +47,12 @@ function pError($error){
 function vald(){
      if(input::exists()){
       if(Token::check(Input::get('Token'))){
-         if(!empty($_POST['College'])){
+         if(!empty($_POST['College']) && !empty($_POST['Role'])){
              $_POST['College'] = implode(',',input::get('College'));
+             $_POST['Role'] = implode(',',input::get('Role'));
          }else{
             $_POST['College'] ="";
+            $_POST['Role'] ="";
          }
         $validate = new Validate;
         $validate = $validate->check($_POST,array(
@@ -96,7 +98,7 @@ function vald(){
                         'groups'=>1,
                         'colleges'=> input::get('College'),
                         'email'=> input::get('email'),
-                        'roles'=> input::get('Role'),
+                        'role'=> input::get('Role'),
                     ));
 
                     $user->createC(array(

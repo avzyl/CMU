@@ -29,6 +29,9 @@ if(isset($_POST["emp_id"]))
          <tr>
          <p>Email: '.$row["email"].'</p>
          </tr>
+         <tr>
+         <p>Role: '.$row["role"].'</p>
+         </tr>
          </div>';
     }
     $output .= "</table></div>";

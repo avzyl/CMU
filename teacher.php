@@ -10,7 +10,7 @@ $dbname = "cmu";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$sql = "SELECT * FROM `tbl_accounts`";
+$sql = "SELECT * FROM `tbl_accounts` WHERE `role` = 'TEACHER'";
 $result = mysqli_query($conn, $sql);
 
 ?>
@@ -66,7 +66,7 @@ $result = mysqli_query($conn, $sql);
               </thead>
               <tbody>
                 <?php
-                  if (mysqli_num_rows($result) > 0) {
+                  // if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
                       ?>
@@ -80,9 +80,9 @@ $result = mysqli_query($conn, $sql);
                       </tr>
                 <?php
                     }
-                  } else {
-                    echo "0 results";
-                  }
+                  // } else {
+                  //   echo "0 results";
+                  // }
 
                   mysqli_close($conn);
                   ?>
